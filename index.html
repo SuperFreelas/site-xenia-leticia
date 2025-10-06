@@ -454,10 +454,21 @@
             box-shadow: 0 3px 15px rgba(0,0,0,0.08);
         }
 
+        .stars-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
         .stars {
             color: var(--button-pink);
             font-size: 1.2rem;
-            margin-bottom: 1rem;
+        }
+
+        .google-badge {
+            width: 20px;
+            height: 20px;
         }
 
         .testimonial-text {
@@ -689,7 +700,7 @@
         <div class="container">
             <div class="about-intro">
                 <div class="about-photo">
-                    <img src="xenia-e1710433368256.webp" alt="Psicóloga Xênia Letícia">
+                    <img src="foto-xenia-leticia.jpg" alt="Psicóloga Xênia Letícia">
                 </div>
                 <div class="about-text">
                     <h2>Sobre Mim</h2>
@@ -891,19 +902,28 @@
             <h2>O que dizem meus pacientes</h2>
             
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
+                <div class="stars-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-badge">
+                    <div class="stars">★★★★★</div>
+                </div>
                 <p class="testimonial-text">"A terapia com a Xênia me ajudou muito a entender meus padrões de pensamento. As sessões são práticas e eu consigo aplicar as técnicas no meu dia a dia. Recomendo!"</p>
                 <p class="testimonial-author">— Maria Silva</p>
             </div>
 
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
+                <div class="stars-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-badge">
+                    <div class="stars">★★★★★</div>
+                </div>
                 <p class="testimonial-text">"Profissional muito competente e acolhedora. Me sinto muito confortável nas sessões online e já vejo resultados no controle da minha ansiedade."</p>
                 <p class="testimonial-author">— João Santos</p>
             </div>
 
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
+                <div class="stars-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-badge">
+                    <div class="stars">★★★★★</div>
+                </div>
                 <p class="testimonial-text">"Excelente psicóloga! Sua experiência corporativa fez toda diferença para me ajudar com questões do trabalho. Muito profissional e empática."</p>
                 <p class="testimonial-author">— Ana Costa</p>
             </div>
