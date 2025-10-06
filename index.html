@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Psicóloga Xênia Letícia - Terapia Cognitivo-Comportamental online. Atendimento humanizado para ansiedade, depressão e desenvolvimento pessoal.">
+    <meta name="description" content="Psicóloga Xênia Letícia - Terapia Cognitivo-Comportamental online. Mais de 20 anos de experiência em desenvolvimento humano.">
     <title>Psicóloga Xênia Letícia | TCC Online</title>
     <style>
         * {
@@ -32,7 +32,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         header {
             background: var(--white);
             padding: 1rem;
@@ -146,7 +145,6 @@
             background: #E087A0;
         }
 
-        /* Hero */
         .hero {
             background: linear-gradient(135deg, rgba(199, 123, 140, 0.85) 0%, rgba(168, 95, 111, 0.85) 100%),
                         url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&h=900&fit=crop&q=80') center/cover no-repeat;
@@ -172,6 +170,14 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
+        }
+
+        .connection-question {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
         }
 
         .hero h1 {
@@ -207,7 +213,6 @@
             background: #E087A0;
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -225,7 +230,6 @@
             text-align: center;
         }
 
-        /* About */
         .about-section {
             background: var(--white);
         }
@@ -290,95 +294,154 @@
         .credentials p {
             color: var(--primary);
             font-weight: 600;
-            margin: 0;
+            margin: 0.3rem 0;
         }
 
-        .about-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 2rem;
+        .education-section {
+            background: var(--secondary);
         }
 
-        .about-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-        }
-
-        .about-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .about-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* Services */
-        .services-grid {
+        .education-list {
             display: grid;
             gap: 1.5rem;
-            margin-top: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .service-card {
+        .education-item {
             background: var(--white);
-            padding: 1.8rem;
+            padding: 1.5rem;
             border-radius: 12px;
             border-left: 4px solid var(--button-pink);
             box-shadow: 0 2px 10px rgba(0,0,0,0.06);
         }
 
-        .service-card h3 {
+        .education-item h3 {
             color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .service-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .service-list li {
-            padding: 0.5rem 0;
+        .education-item p {
             color: var(--text-light);
-            padding-left: 1.5rem;
-            position: relative;
+            font-size: 0.95rem;
         }
 
-        .service-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--button-pink);
-            font-weight: bold;
-        }
-
-        /* FAQ */
-        .faq-item {
+        .for-you-section {
             background: var(--white);
+        }
+
+        .for-you-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .for-you-card {
+            background: var(--secondary);
             padding: 1.8rem;
-            margin-bottom: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .for-you-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .for-you-card p {
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .approaches-section {
+            background: var(--bg);
+        }
+
+        .approaches-category {
+            margin-bottom: 3rem;
+        }
+
+        .approaches-category h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .approaches-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .approach-card {
+            background: var(--white);
+            padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.06);
         }
 
-        .faq-item h3 {
+        .approach-card h4 {
             color: var(--primary);
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
 
-        .faq-item p {
+        .approach-card p {
             color: var(--text-light);
             line-height: 1.7;
         }
 
-        /* Testimonials */
+        .faq-item {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-space-between;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            user-select: none;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--button-pink);
+            transition: transform 0.3s;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 1rem;
+        }
+
         .testimonials {
             background: var(--secondary);
         }
@@ -409,7 +472,27 @@
             font-weight: 600;
         }
 
-        /* CTA Section */
+        .google-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .google-link a {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border: 2px solid var(--primary);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .google-link a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
         .cta-section {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
@@ -428,7 +511,6 @@
             opacity: 0.95;
         }
 
-        /* Footer */
         footer {
             background: var(--text);
             color: white;
@@ -439,9 +521,35 @@
         footer p {
             opacity: 0.8;
             font-size: 0.9rem;
+            margin: 0.5rem 0;
         }
 
-        /* WhatsApp Float */
+        footer a {
+            color: var(--button-pink);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--button-pink);
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -465,7 +573,6 @@
             transform: scale(1.1);
         }
 
-        /* Responsive */
         @media (min-width: 768px) {
             .hero {
                 padding: 5rem 1.5rem;
@@ -473,6 +580,10 @@
 
             .hero h1 {
                 font-size: 2.8rem;
+            }
+
+            .connection-question {
+                font-size: 1.5rem;
             }
 
             .logo-mobile {
@@ -499,11 +610,11 @@
                 max-width: 350px;
             }
 
-            .about-grid {
+            .for-you-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .services-grid {
+            .approaches-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -525,14 +636,13 @@
                 font-size: 3.2rem;
             }
 
-            .services-grid {
+            .for-you-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-content">
             <div class="logo">
@@ -543,7 +653,7 @@
             <nav>
                 <a href="#home">Início</a>
                 <a href="#sobre">Sobre Mim</a>
-                <a href="#como-ajudo">Como Ajudo</a>
+                <a href="#abordagens">Abordagens</a>
                 <a href="#depoimentos">Depoimentos</a>
                 <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="cta-header">
                     📱 WhatsApp
@@ -558,125 +668,224 @@
         </div>
     </header>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#home" onclick="toggleMenu()">Início</a>
         <a href="#sobre" onclick="toggleMenu()">Sobre Mim</a>
-        <a href="#como-ajudo" onclick="toggleMenu()">Como Ajudo</a>
+        <a href="#abordagens" onclick="toggleMenu()">Abordagens</a>
         <a href="#depoimentos" onclick="toggleMenu()">Depoimentos</a>
-        <a href="https://wa.me/5511966028821?text=Olá! Gostaria de saber mais sobre a terapia">📱 WhatsApp</a>
+        <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a).">📱 WhatsApp</a>
     </div>
 
-    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Terapia que transforma pensamentos em ações práticas</h1>
-            <p>Psicóloga especializada em TCC. Atendimento online humanizado para você cuidar da sua saúde mental com conforto e segurança.</p>
-            <a href="https://wa.me/5511966028821?text=Olá! Gostaria de agendar uma sessão" class="hero-cta">Agende sua Sessão</a>
+            <p class="connection-question">"Quantas vezes você já tentou mudar algo, mas se sentiu preso aos mesmos padrões?"</p>
+            <h1>Psicologia que transforma o jeito de pensar e cria novas formas de agir</h1>
+            <p>Mais de 20 anos de experiência em desenvolvimento humano. Atendimento online humanizado com TCC.</p>
+            <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Agende sua primeira consulta</a>
         </div>
     </section>
 
-    <!-- About / Sobre Mim -->
     <section class="about-section" id="sobre">
         <div class="container">
             <div class="about-intro">
                 <div class="about-photo">
-                    <img src="xenia-e1710433368256.webp" alt="Psicóloga Xênia Letícia">
+                    <img src="foto-xenia-leticia.jpg" alt="Psicóloga Xênia Letícia">
                 </div>
                 <div class="about-text">
                     <h2>Sobre Mim</h2>
-                    <h3>Xênia Letícia</h3>
-                    <p>Olá! Sou psicóloga especializada em Terapia Cognitivo-Comportamental (TCC), com uma trajetória que une o cuidado com a saúde mental e a experiência prática do mundo corporativo.</p>
+                    <h3>Xênia Letícia M. Hisamoto</h3>
+                    <p>Olá, meu nome é Xênia Letícia, psicoterapeuta com mais de 20 anos de experiência em desenvolvimento humano.</p>
                     
-                    <p>Durante anos atuei na área de Recursos Humanos, especialmente no desenvolvimento de lideranças e gestão de pessoas. Essa vivência me proporcionou uma compreensão profunda das pressões, desafios e dinâmicas do ambiente profissional.</p>
+                    <p>Minha trajetória na psicologia foi motivada pelo meu interesse genuíno em ouvir ativamente as histórias das pessoas e orientá-las em suas jornadas. Ao longo da minha carreira, combinei minha formação em Psicologia, Pós-Graduação em Recursos Humanos, Especialização na abordagem Cognitivo-Comportamental (TCC) e Neurociência, para oferecer uma terapia prática e estruturada.</p>
                     
-                    <p>Hoje, trago essa bagagem para minha prática clínica, oferecendo um olhar diferenciado para quem busca equilíbrio entre vida pessoal e profissional, controle emocional e desenvolvimento de habilidades para lidar com os desafios do dia a dia.</p>
+                    <p>Meu trabalho é ajudar pessoas que estão em busca de desenvolvimento pessoal e profissional. Juntos, buscaremos soluções para superar traumas, medos, tristezas, angústias e ansiedades, promovendo uma vida mais saudável e equilibrada.</p>
                     
-                    <p>Meu compromisso é proporcionar um atendimento acolhedor, onde você se sinta confortável para explorar suas questões e construir estratégias práticas de mudança.</p>
+                    <p>Atendo adolescentes e adultos. Nas minhas sessões, você pode esperar acolhimento, técnicas eficazes de TCC e, quando necessário, mentoria de carreira para lidar com desafios e superar obstáculos na vida profissional.</p>
                     
                     <div class="credentials">
                         <p>🎓 CRP 06/82962</p>
                         <p>📚 Especialista em Terapia Cognitivo-Comportamental</p>
-                        <p>💼 Experiência em RH e Desenvolvimento Humano</p>
+                        <p>💼 Mais de 20 anos de experiência</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <div class="container">
+            <h2>Formação Acadêmica</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3>Psicologia</h3>
+                    <p>Faculdade Metodista de São Paulo (2005)</p>
+                </div>
+                <div class="education-item">
+                    <h3>Pós-graduação em Recursos Humanos</h3>
+                    <p>Universidade Municipal de São Caetano do Sul (2012)</p>
+                </div>
+                <div class="education-item">
+                    <h3>Terapia Cognitivo-Comportamental</h3>
+                    <p>CTC-VEDA (2024)</p>
+                </div>
+                <div class="education-item">
+                    <h3>TCC para Ansiedade</h3>
+                    <p>Instituto Cognitive Behavior Therapy (2025)</p>
+                </div>
+                <div class="education-item">
+                    <h3>Pós-graduação em Neurociência, Comportamento e Psicopatologia</h3>
+                    <p>PUCPR (2025 - em andamento)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="for-you-section">
+        <div class="container">
+            <h2>Psicoterapia é para você que...</h2>
+            <div class="for-you-grid">
+                <div class="for-you-card">
+                    <p>Sente a mente acelerada e inquieta, como se não conseguisse parar de pensar.</p>
+                </div>
+                <div class="for-you-card">
+                    <p>Tem uma sensação ruim constante, mesmo quando tudo parece estar sob controle.</p>
+                </div>
+                <div class="for-you-card">
+                    <p>Fica sem energia e sem vontade de levantar da cama, como se nada fizesse diferença.</p>
+                </div>
+                <div class="for-you-card">
+                    <p>Sente que chegou a uma exaustão emocional e física e não tem vontade de ir trabalhar ou fazer coisas simples do dia a dia.</p>
+                </div>
+                <div class="for-you-card">
+                    <p>Tem dificuldade em lidar com o que sente, hora tem muita raiva e hora paralisa pelo medo.</p>
+                </div>
+                <div class="for-you-card">
+                    <p>Duvida de si mesma(o), com medo de errar ou de não ser suficiente para os outros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="approaches-section" id="abordagens">
+        <div class="container">
+            <h2>Minhas Abordagens</h2>
+            
+            <div class="approaches-category">
+                <h3>Atendimento Clínico (Individual)</h3>
+                <div class="approaches-grid">
+                    <div class="approach-card">
+                        <h4>Psicoterapia Online</h4>
+                        <p>Com a TCC, identificamos padrões de pensamento e comportamento, compreendendo suas emoções e desenvolvendo estratégias práticas para o seu momento atual.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h4>Orientação de Carreira e Profissional</h4>
+                        <p>Apoio no autoconhecimento, no desenvolvimento de competências e na tomada de decisões estratégicas para sua trajetória profissional.</p>
                     </div>
                 </div>
             </div>
 
-            <h2 style="margin-top: 3rem;">Minha Abordagem</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>Terapia Cognitivo-Comportamental</h3>
-                    <p>A TCC trabalha com a identificação e reestruturação de padrões de pensamentos e comportamentos. Juntos, vamos entender melhor suas emoções e desenvolver estratégias práticas para o seu momento atual.</p>
-                </div>
-                <div class="about-card">
-                    <h3>Experiência Corporativa</h3>
-                    <p>Com sólida experiência em RH e desenvolvimento de lideranças, compreendo os desafios do ambiente corporativo e ofereço insights práticos para lidar com estresse e relações profissionais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section style="background: var(--bg);" id="como-ajudo">
-        <div class="container">
-            <h2>Como Posso Ajudar Você?</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Ansiedade e Estresse</h3>
-                    <ul class="service-list">
-                        <li>Controle da ansiedade</li>
-                        <li>Gestão do estresse</li>
-                        <li>Técnicas de relaxamento</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Desenvolvimento Pessoal</h3>
-                    <ul class="service-list">
-                        <li>Fortalecimento da autoestima</li>
-                        <li>Autoconhecimento</li>
-                        <li>Controle emocional</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Relacionamentos</h3>
-                    <ul class="service-list">
-                        <li>Melhoria nos relacionamentos</li>
-                        <li>Comunicação assertiva</li>
-                        <li>Relações interpessoais</li>
-                    </ul>
+            <div class="approaches-category">
+                <h3>Atendimento Organizacional (Empresas)</h3>
+                <div class="approaches-grid">
+                    <div class="approach-card">
+                        <h4>Palestras e Workshops</h4>
+                        <p>Conteúdos práticos para desenvolvimento de pessoas, liderança e bem-estar no trabalho.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h4>Consultoria de Clima e Bem-Estar</h4>
+                        <p>Diagnóstico, estratégias e ações para melhorar o ambiente organizacional e a qualidade de vida dos colaboradores.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
     <section>
         <div class="container">
             <h2>Perguntas Frequentes</h2>
             
-            <div class="faq-item">
-                <h3>Como funcionam as sessões?</h3>
-                <p>As sessões têm duração de 50 minutos a 1 hora e são realizadas online através do Google Meet. É um tempo exclusivo dedicado a você, onde trabalhamos em soluções práticas para trazer mais tranquilidade ao seu dia a dia.</p>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Como a Terapia Cognitivo-Comportamental (TCC) Funciona na Prática?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    A Terapia Cognitivo-Comportamental tem como base a identificação e a reestruturação de padrões de pensamentos e comportamentos que podem estar impactando sua vida. Durante as sessões, meu papel é guiá-lo nesse processo, ajudando você a entender melhor suas emoções e a desenvolver estratégias práticas e ajustadas ao seu momento atual.
+                </div>
             </div>
 
-            <div class="faq-item">
-                <h3>Qual o valor das sessões?</h3>
-                <p>Atualmente não trabalho com planos de saúde, mas ofereço opções de reembolso e condições flexíveis de pagamento para tornar o cuidado com sua saúde mental acessível.</p>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Quais resultados posso esperar?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    O objetivo da TCC é transformar suas reflexões em ações práticas. Juntos, trabalharemos para criar mudanças que você possa aplicar no dia a dia, tanto em questões pessoais quanto profissionais.
+                </div>
             </div>
 
-            <div class="faq-item">
-                <h3>Quais resultados posso esperar?</h3>
-                <p>O objetivo da TCC é transformar suas reflexões em ações práticas. Juntos, trabalharemos para criar mudanças que você possa aplicar no dia a dia, tanto em questões pessoais quanto profissionais.</p>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Como minha experiência no mundo corporativo pode auxiliar no processo terapêutico?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Com uma sólida experiência em Recursos Humanos, especialmente no desenvolvimento de lideranças e gestão de pessoas, entendo bem as pressões e desafios do ambiente corporativo. Posso oferecer insights práticos para lidar com questões como estresse, relações interpessoais no trabalho e desenvolvimento pessoal. Minha prática clínica, aliada à experiência corporativa, permite que eu adapte estratégias da TCC para ajudar você a gerenciar melhor suas emoções e a tomar decisões alinhadas aos seus objetivos de vida e carreira.
+                </div>
             </div>
 
-            <div class="faq-item">
-                <h3>As sessões são presenciais?</h3>
-                <p>As sessões são realizadas de forma online através do Google Meet, proporcionando maior segurança, conforto e flexibilidade para você.</p>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Para quem a psicoterapia é indicada?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    A TCC é ideal para quem: lida com ansiedade, depressão ou estresse; está passando por mudanças significativas de vida; quer fortalecer a autoestima; melhorar seus relacionamentos; e aprimorar o controle emocional.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Como funcionam as sessões?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    As sessões duram entre 50 minutos e 1 hora, um tempo exclusivo para focarmos no que é importante para você. Juntos, vamos trabalhar em soluções práticas que tragam mais tranquilidade e bem-estar ao seu cotidiano.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Qual o valor das sessões?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Atualmente, não trabalho com planos de saúde, mas ofereço opções de reembolso ou condições flexíveis de pagamento para tornar o cuidado com sua saúde mental acessível.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Onde são realizadas as sessões?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    As sessões são on-line, através do Google Meet, para maior segurança e conforto.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Como faço para ter mais informações?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Se você quer entender melhor como a terapia pode ajudar, basta enviar uma mensagem, que irei responder todas as suas dúvidas.
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="testimonials" id="depoimentos">
         <div class="container">
             <h2>O que dizem meus pacientes</h2>
@@ -699,35 +908,38 @@
                 <p class="testimonial-author">— Ana Costa</p>
             </div>
 
-            <p style="text-align: center; margin-top: 2rem; color: var(--text-light);">
-                ⭐ Avaliações verificadas do Google
-            </p>
+            <div class="google-link">
+                <a href="https://www.google.com/search?q=X%C3%AAnia+Leticia+M.+Hisamoto+Psic%C3%B3loga+e+Consultora+de+Carreira" target="_blank">⭐ Ver mais avaliações no Google</a>
+            </div>
         </div>
     </section>
 
-    <!-- CTA Final -->
     <section class="cta-section">
         <div class="container">
-            <h2>Pronta para começar?</h2>
-            <p>Entre em contato e tire todas as suas dúvidas. Vamos conversar sobre como a terapia pode te ajudar.</p>
-            <a href="https://wa.me/5511966028821?text=Olá! Gostaria de saber mais sobre a terapia" class="hero-cta">Falar no WhatsApp</a>
+            <h2>Vamos conversar sobre seu momento?</h2>
+            <p>Entre em contato e tire todas as suas dúvidas. Fale comigo e entenda como posso te ajudar.</p>
+            <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Agende sua sessão individual</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p><strong>Psicóloga Xênia Letícia</strong></p>
+            <p><strong>Psicóloga Xênia Letícia M. Hisamoto</strong></p>
             <p>CRP 06/82962</p>
-            <p style="margin-top: 1rem;">📱 (11) 96602-8821</p>
-            <p>✉️ xeniahisamoto@gmail.com</p>
+            <p style="margin-top: 1rem;">📱 <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a).">(11) 96602-8821</a></p>
+            <p>✉️ <a href="mailto:contato@psicologaxenialeticia.com.br">contato@psicologaxenialeticia.com.br</a></p>
+            <p>✉️ <a href="mailto:xeniahisamoto@gmail.com">xeniahisamoto@gmail.com</a></p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/psicologaxenialeticia" target="_blank" title="Instagram">📷</a>
+            </div>
+            
             <p style="margin-top: 1rem;">Atendimento online via Google Meet</p>
             <p style="margin-top: 1.5rem; opacity: 0.6;">© 2025 - Todos os direitos reservados</p>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5511966028821?text=Olá! Vim pelo site e gostaria de mais informações" class="whatsapp-float" target="_blank" title="Fale no WhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="whatsapp-float" target="_blank" title="Fale no WhatsApp">
         💬
     </a>
 
@@ -737,7 +949,10 @@
             menu.classList.toggle('active');
         }
 
-        // Smooth scroll
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

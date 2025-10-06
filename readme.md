@@ -120,13 +120,15 @@ Se hospedar a foto em outro lugar:
 | Seção | Descrição |
 |-------|-----------|
 | **Header** | Logo e menu de navegação responsivo |
-| **Hero** | Chamada principal com CTA para WhatsApp |
-| **Sobre Mim** | Apresentação da profissional com foto |
-| **Como Ajudo** | Áreas de atuação e especialidades |
-| **Perguntas Frequentes** | FAQ sobre o atendimento |
-| **Depoimentos** | Reviews de pacientes |
+| **Hero** | Pergunta de conexão + Headline + CTA |
+| **Sobre Mim** | Apresentação completa da profissional com foto |
+| **Formação Acadêmica** | Timeline de cursos e certificações |
+| **Psicoterapia é para você** | 6 situações que identificam o público |
+| **Minhas Abordagens** | Clínico (Individual) + Organizacional (Empresas) |
+| **Perguntas Frequentes** | FAQ com accordion interativo |
+| **Depoimentos** | Reviews de pacientes + link Google |
 | **CTA Final** | Chamada final para contato |
-| **Footer** | Informações de rodapé |
+| **Footer** | Todos os contatos + Instagram |
 | **WhatsApp Float** | Botão flutuante fixo |
 
 ## 🌐 Deploy
@@ -179,8 +181,10 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 ## 📞 Contato
 
 - 📱 WhatsApp: [(11) 96602-8821](https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a).)
-- ✉️ Email: xeniahisamoto@gmail.com
-- 🌐 Website: [https://seu-usuario.github.io/site-xenia-leticia/](https://seu-usuario.github.io/site-xenia-leticia/)
+- ✉️ Email Institucional: contato@psicologaxenialeticia.com.br
+- ✉️ Email Pessoal: xeniahisamoto@gmail.com
+- 📷 Instagram: [@psicologaxenialeticia](https://www.instagram.com/psicologaxenialeticia)
+- 🌐 Website: [https://superfreelas.github.io/site-xenia-leticia/](https://superfreelas.github.io/site-xenia-leticia/)
 
 ## 🤝 Contribuindo
 
@@ -193,6 +197,34 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 5. Abrir um Pull Request
 
 ## 📝 Changelog
+
+### [2.0.0] - 2025-10-06
+
+#### 🎨 Redesign Completo do Conteúdo
+
+**Adicionado:**
+- ✨ Pergunta de conexão no hero: "Quantas vezes você já tentou mudar algo..."
+- 📚 Nova seção "Formação Acadêmica" com 5 certificações/cursos
+- 💭 Nova seção "Psicoterapia é para você que..." com 6 situações específicas
+- 🏢 Divisão clara: Atendimento Clínico vs Atendimento Organizacional
+- ➕ FAQ com sistema accordion (abrir/fechar)
+- 📧 Email institucional: contato@psicologaxenialeticia.com.br
+- 📷 Link do Instagram: @psicologaxenialeticia
+- 🔗 Link para avaliações do Google
+- 📱 CTAs diversificados conforme sugestão da cliente
+
+**Modificado:**
+- 🎯 Headline do hero: "Psicologia que transforma o jeito de pensar..."
+- 📝 Texto completo da seção "Sobre Mim" (mais de 20 anos de experiência)
+- 🎓 Credenciais atualizadas com experiência detalhada
+- 🔄 Reorganização da seção "Minhas Abordagens"
+- 💬 Textos dos botões CTA variados
+
+**Melhorado:**
+- 📱 Layout mobile-first ainda mais otimizado
+- 🎨 Visual das novas seções harmonizado com paleta carmim
+- ⚡ Performance mantida com HTML puro
+- 🎭 Animações suaves no FAQ accordion
 
 ### [1.0.0] - 2025-10-05
 
