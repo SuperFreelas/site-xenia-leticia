@@ -301,54 +301,21 @@
 
         .credentials {
             background: var(--secondary);
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 10px;
             margin-top: 1.5rem;
-        }
-
-        .credentials p {
-            color: var(--primary);
-            font-weight: 600;
-            margin: 0.3rem 0;
-        }
-
-        .education-section {
-            background: var(--bg);
-            padding: 2rem 0 !important;
-        }
-
-        .education-section h2 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            opacity: 0.8;
         }
 
         .education-list {
             display: grid;
             gap: 0.8rem;
-            max-width: 700px;
-            margin: 0 auto;
         }
 
         .education-item {
             background: transparent;
-            padding: 0.8rem 1rem;
-            border-radius: 6px;
+            padding: 0.5rem 0;
             border-left: 2px solid var(--accent);
-            box-shadow: none;
-        }
-
-        .education-item h3 {
-            color: var(--text);
-            font-size: 0.95rem;
-            margin-bottom: 0.2rem;
-            font-weight: 500;
-        }
-
-        .education-item p {
-            color: var(--text-light);
-            font-size: 0.85rem;
-            opacity: 0.8;
+            padding-left: 1rem;
         }
 
         .for-you-section {
@@ -754,38 +721,30 @@
                     <p>Será um prazer caminhar com você nessa jornada de transformação. Vamos juntos construir um novo olhar sobre si mesmo e sobre a vida?</p>
 
                     <div class="credentials">
-                        <p><strong>Formação:</strong> Psicologia desde 2005</p>
-                        <p><strong>Qualificação:</strong> Abordagem Cognitivo Comportamental e Neurociência do Comportamento</p>
-                        <p><strong>Experiência:</strong> 20 anos atuando com desenvolvimento humano e orientação pessoal e profissional</p>
+                        <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 1rem;">Formação Acadêmica</h3>
+                        <div class="education-list">
+                            <div class="education-item">
+                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Psicologia</h4>
+                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">Faculdade Metodista de São Paulo (2005)</p>
+                            </div>
+                            <div class="education-item">
+                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Pós-graduação em Recursos Humanos</h4>
+                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">Universidade Municipal de São Caetano do Sul (2012)</p>
+                            </div>
+                            <div class="education-item">
+                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Terapia Cognitivo-Comportamental</h4>
+                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">CTC-VEDA (2024)</p>
+                            </div>
+                            <div class="education-item">
+                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Terapia Cognitivo-Comportamental para Ansiedade</h4>
+                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">Instituto Cognitive Behavior Therapy (2025)</p>
+                            </div>
+                            <div class="education-item">
+                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Pós Neurociência, Comportamento e Psicopatologia</h4>
+                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">PUCPR (2025 - em andamento)</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="education-section">
-        <div class="container">
-            <h2>Formação Acadêmica</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <h3>Psicologia</h3>
-                    <p>Faculdade Metodista de São Paulo (2005)</p>
-                </div>
-                <div class="education-item">
-                    <h3>Pós-graduação em Recursos Humanos</h3>
-                    <p>Universidade Municipal de São Caetano do Sul (2012)</p>
-                </div>
-                <div class="education-item">
-                    <h3>Terapia Cognitivo-Comportamental</h3>
-                    <p>CTC-VEDA (2024)</p>
-                </div>
-                <div class="education-item">
-                    <h3>Terapia Cognitivo-Comportamental para Ansiedade</h3>
-                    <p>Instituto Cognitive Behavior Therapy (2025)</p>
-                </div>
-                <div class="education-item">
-                    <h3>Pós Neurociência, Comportamento e Psicopatologia</h3>
-                    <p>PUCPR (2025 - em andamento)</p>
                 </div>
             </div>
         </div>
@@ -814,6 +773,9 @@
                     <p>Duvida de si mesma(o), com medo de errar ou de não ser suficiente para os outros.</p>
                 </div>
             </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Fale comigo no WhatsApp</a>
+            </div>
         </div>
     </section>
 
@@ -830,7 +792,7 @@
                     </div>
                     <div class="approach-card">
                         <h4>Orientação de Carreira e Profissional</h4>
-                        <p>Atendimento voltado a pessoas que buscam maior autoconhecimento, desenvolvimento de competências e suporte na tomada de decisões ao longo da trajetória profissional — incluindo momentos de transição ou recolocação no mercado.</p>
+                        <p>Atendimento voltado a pessoas que buscam maior autoconhecimento, desenvolvimento de competências e suporte na tomada de decisões ao longo da trajetória profissional, ou recolocação no mercado.</p>
                     </div>
                 </div>
             </div>
@@ -847,6 +809,9 @@
                         <p>Diagnóstico, estratégias e ações para aprimorar o ambiente organizacional, a qualidade de vida dos colaboradores e o engajamento das equipes, incluindo a aplicação e análise de pesquisas de clima.</p>
                     </div>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Quero saber mais sobre as abordagens</a>
             </div>
         </div>
     </section>
@@ -933,6 +898,9 @@
                 <div class="faq-answer">
                     Se você quer entender melhor como a terapia pode ajudar, basta enviar uma mensagem, que irei responder todas as suas dúvidas.
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Tirar dúvidas pelo WhatsApp</a>
             </div>
         </div>
     </section>
