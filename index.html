@@ -329,15 +329,29 @@
         }
 
         .for-you-card {
-            background: var(--secondary);
+            background: var(--white);
             padding: 1.8rem;
             border-radius: 15px;
             box-shadow: 0 3px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 2px solid var(--secondary);
         }
 
         .for-you-card:hover {
             transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .for-you-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1;
+            filter: grayscale(100%);
+            opacity: 0.6;
         }
 
         .for-you-card p {
@@ -716,7 +730,7 @@
             <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 400;">Xênia Leticia M. Hisamoto</h3>
             <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.9;">CRP: 06/82962</p>
             <p class="connection-question">"Quantas vezes você já tentou mudar algo, mas se sentiu preso aos mesmos padrões?"</p>
-            <h1>Psicologia que transforma o jeito de pensar e cria novas formas de agir</h1>
+            <h1>Cuidando da mente para transformar a vida.</h1>
             <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Agende sua primeira consulta</a>
         </div>
     </section>
@@ -774,21 +788,27 @@
             <h2>Psicoterapia é para você que...</h2>
             <div class="for-you-grid">
                 <div class="for-you-card">
+                    <div class="for-you-icon">🌀</div>
                     <p>Sente a mente acelerada e inquieta, como se não conseguisse parar de pensar.</p>
                 </div>
                 <div class="for-you-card">
+                    <div class="for-you-icon">☁️</div>
                     <p>Tem uma sensação ruim constante, mesmo quando tudo parece estar sob controle.</p>
                 </div>
                 <div class="for-you-card">
+                    <div class="for-you-icon">😔</div>
                     <p>Fica sem energia e sem vontade de levantar da cama, como se nada fizesse diferença.</p>
                 </div>
                 <div class="for-you-card">
+                    <div class="for-you-icon">😰</div>
                     <p>Sente que chegou a uma exaustão emocional e física e não tem vontade de ir trabalhar ou fazer coisas simples do dia a dia.</p>
                 </div>
                 <div class="for-you-card">
+                    <div class="for-you-icon">🎭</div>
                     <p>Tem dificuldade em lidar com o que sente, hora tem muita raiva e hora paralisa pelo medo.</p>
                 </div>
                 <div class="for-you-card">
+                    <div class="for-you-icon">💭</div>
                     <p>Duvida de si mesma(o), com medo de errar ou de não ser suficiente para os outros.</p>
                 </div>
             </div>
