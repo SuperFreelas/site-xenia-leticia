@@ -59,13 +59,21 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--primary);
         }
 
+        .logo img {
+            height: 35px;
+            width: auto;
+        }
+
         .logo-mobile {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .logo-desktop {
@@ -188,22 +196,22 @@
         }
 
         .connection-question {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-style: italic;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             opacity: 0.95;
             font-weight: 300;
         }
 
         .hero h1 {
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             line-height: 1.2;
             text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 2rem;
             opacity: 0.98;
             text-shadow: 0 1px 5px rgba(0,0,0,0.15);
@@ -284,56 +292,141 @@
 
         .about-text h2 {
             text-align: left;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .about-text h3 {
             color: var(--primary);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .about-text .crp {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .about-text .greeting {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .about-text p {
             color: var(--text-light);
             line-height: 1.8;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            background: var(--bg);
+            border-radius: 10px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .about-highlights p {
+            margin-bottom: 0.8rem;
+        }
+
+        .about-highlights p:last-child {
+            margin-bottom: 0;
         }
 
         .credentials {
-            background: var(--secondary);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .credentials h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .education-list {
             display: grid;
             gap: 0.8rem;
+            grid-template-columns: 1fr;
         }
 
         .education-item {
-            background: transparent;
-            padding: 0.5rem 0;
-            border-left: 2px solid var(--accent);
-            padding-left: 1rem;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid var(--secondary);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .education-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .education-item h4 {
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            line-height: 1.3;
+            padding-left: 0.8rem;
+        }
+
+        .education-item p {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            opacity: 0.85;
+            margin: 0;
+            padding-left: 0.8rem;
         }
 
         .for-you-section {
             background: var(--white);
         }
 
-        .for-you-grid {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 2rem;
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            margin: 2rem auto;
+            padding: 0 2.5rem;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
 
         .for-you-card {
+            min-width: 100%;
             background: var(--white);
-            padding: 1.8rem;
+            padding: 2.5rem 1.8rem;
             border-radius: 15px;
             box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -341,23 +434,72 @@
             border: 2px solid var(--secondary);
         }
 
-        .for-you-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .for-you-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1;
-            filter: grayscale(100%);
-            opacity: 0.6;
+        .for-you-card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
         }
 
         .for-you-card p {
             color: var(--text);
-            line-height: 1.7;
-            font-size: 1.05rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--button-pink);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .carousel-nav:hover {
+            background: var(--primary);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-nav.prev {
+            left: 0;
+        }
+
+        .carousel-nav.next {
+            right: 0;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--secondary);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary);
+            width: 25px;
+            border-radius: 5px;
         }
 
         .approaches-section {
@@ -451,46 +593,65 @@
             background: var(--secondary);
         }
 
-        .testimonial-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        .testimonials-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            grid-template-columns: 1fr;
         }
 
-        .stars-container {
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .quote-icon {
+            display: none;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--button-pink), var(--primary));
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
             margin-bottom: 1rem;
         }
 
-        .stars {
-            color: var(--button-pink);
-            font-size: 1.2rem;
+        .testimonial-avatar svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
         }
 
-        .google-badge {
-            width: 20px;
-            height: 20px;
+        .stars {
+            display: flex;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--button-pink);
         }
 
         .testimonial-text {
             color: var(--text-light);
             font-style: italic;
             margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .testimonial-author {
-            color: var(--primary);
-            font-weight: 600;
+            line-height: 1.8;
+            font-size: 1.05rem;
         }
 
         .google-link {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .google-link a {
@@ -620,11 +781,15 @@
             }
 
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.4rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
             }
 
             .connection-question {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             .logo-mobile {
@@ -651,12 +816,28 @@
                 max-width: 350px;
             }
 
-            .for-you-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .carousel-container {
+                padding: 0 4rem;
+            }
+
+            .for-you-card {
+                min-width: 50%;
             }
 
             .approaches-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .education-list {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .logo img {
+                height: 40px;
             }
 
             section {
@@ -674,11 +855,15 @@
             }
 
             .hero h1 {
-                font-size: 3.2rem;
+                font-size: 3rem;
             }
 
-            .for-you-grid {
-                grid-template-columns: repeat(3, 1fr);
+            .connection-question {
+                font-size: 1.5rem;
+            }
+
+            .for-you-card {
+                min-width: 33.333%;
             }
         }
     </style>
@@ -687,8 +872,9 @@
     <header>
         <div class="header-content">
             <div class="logo">
+                <img src="logo-xenia-02.png" alt="Logo Xênia Letícia">
                 <span class="logo-mobile">Xênia Letícia</span>
-                <span class="logo-desktop">Psicóloga Xênia Letícia</span>
+                <span class="logo-desktop">Psicóloga Xênia Leticia M. Hisamoto</span>
             </div>
             
             <nav>
@@ -727,10 +913,8 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 400;">Xênia Leticia M. Hisamoto</h3>
-            <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.9;">CRP: 06/82962</p>
-            <p class="connection-question">"Quantas vezes você já tentou mudar algo, mas se sentiu preso aos mesmos padrões?"</p>
-            <h1>Cuidando da mente para transformar a vida.</h1>
+            <p class="connection-question">Tratamento especializado para ansiedade, depressão, burnout e outros transtornos psicológicos.</p>
+            <h1>Psicoterapia para mentes ansiosas e exaustas, que buscam melhorar sua saúde mental.</h1>
             <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Agende sua primeira consulta</a>
         </div>
     </section>
@@ -743,38 +927,45 @@
                 </div>
                 <div class="about-text">
                     <h2>Sobre Mim</h2>
-                    <p>Olá, eu me chamo Xênia. Sou psicoterapeuta e atuo ajudando pessoas a compreenderem seus pensamentos, emoções e comportamentos para que possam viver com mais leveza e clareza.</p>
+                    <h3>Xênia Leticia M. Hisamoto</h3>
+                    <p class="crp">CRP: 06/82962</p>
 
-                    <p>Minha forma de trabalhar une acolhimento e praticidade, sem perder a profundidade da terapia, por isso, busco oferecer um espaço seguro para refletir, se fortalecer e criar estratégias para lidar com os desafios da vida.</p>
+                    <p class="greeting">Olá, que bom ter você por aqui!</p>
 
-                    <p>Atendo adolescentes e adultos que buscam compreender suas emoções, lidar com momentos de tristeza, insegurança, sobrecarga, baixa autoestima ou pensamentos repetitivos que geram desconforto.</p>
+                    <p>Eu me chamo Xênia, psicóloga clínica e organizacional. Atuei por 20 anos no mundo corporativo, com foco no desenvolvimento de pessoas, liderança e clima organizacional — uma vivência que ampliou meu olhar sobre as relações humanas e fortaleceu minha prática clínica.</p>
 
-                    <p>Com uma escuta atenta, empática e técnicas baseadas na Psicologia Cognitivo-Comportamental, ajudo você a enxergar novas possibilidades, fazer escolhas mais conscientes e construir uma vida mais equilibrada, tanto no lado profissional, pessoal e de relacionamentos.</p>
+                    <div class="about-highlights">
+                        <p><strong>No consultório,</strong> atendo adolescentes e adultos que enfrentam ansiedade, depressão, burnout e outros transtornos psicológicos, oferecendo um espaço acolhedor e prático para compreender emoções e desenvolver estratégias de mudança.</p>
 
-                    <p>Será um prazer caminhar com você nessa jornada de transformação. Vamos juntos construir um novo olhar sobre si mesmo e sobre a vida?</p>
+                        <p><strong>Nas organizações,</strong> apoio líderes e equipes a promover um ambiente mais saudável e produtivo, com foco no bem-estar e nas relações de trabalho.</p>
+                    </div>
+
+                    <p>Minha abordagem, baseada na Psicologia Cognitivo-Comportamental, busca clareza e equilíbrio, tanto na vida pessoal quanto profissional.</p>
+
+                    <p style="color: var(--primary); font-weight: 500;">Fez sentido para você? Vamos conversar?</p>
 
                     <div class="credentials">
-                        <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 1rem;">Formação Acadêmica</h3>
+                        <h3>Formação Acadêmica</h3>
                         <div class="education-list">
                             <div class="education-item">
-                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Psicologia</h4>
-                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">Faculdade Metodista de São Paulo (2005)</p>
+                                <h4>Psicologia</h4>
+                                <p>Faculdade Metodista de São Paulo (2005)</p>
                             </div>
                             <div class="education-item">
-                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Pós-graduação em Recursos Humanos</h4>
-                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">Universidade Municipal de São Caetano do Sul (2012)</p>
+                                <h4>Pós-graduação em Recursos Humanos</h4>
+                                <p>Universidade Municipal de São Caetano do Sul (2012)</p>
                             </div>
                             <div class="education-item">
-                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Terapia Cognitivo-Comportamental</h4>
-                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">CTC-VEDA (2024)</p>
+                                <h4>Terapia Cognitivo-Comportamental</h4>
+                                <p>CTC-VEDA (2024)</p>
                             </div>
                             <div class="education-item">
-                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Terapia Cognitivo-Comportamental para Ansiedade</h4>
-                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">Instituto Cognitive Behavior Therapy (2025)</p>
+                                <h4>TCC para Ansiedade</h4>
+                                <p>Instituto Cognitive Behavior Therapy (2025)</p>
                             </div>
                             <div class="education-item">
-                                <h4 style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 500;">Pós Neurociência, Comportamento e Psicopatologia</h4>
-                                <p style="color: var(--text-light); font-size: 0.85rem; opacity: 0.8; margin: 0.3rem 0;">PUCPR (2025 - em andamento)</p>
+                                <h4>Pós Neurociência, Comportamento e Psicopatologia</h4>
+                                <p>PUCPR (2025 - em andamento)</p>
                             </div>
                         </div>
                     </div>
@@ -786,31 +977,38 @@
     <section class="for-you-section">
         <div class="container">
             <h2>Psicoterapia é para você que...</h2>
-            <div class="for-you-grid">
-                <div class="for-you-card">
-                    <div class="for-you-icon">🌀</div>
-                    <p>Sente a mente acelerada e inquieta, como se não conseguisse parar de pensar.</p>
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">‹</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="for-you-card">
+                            <h3>Ansiedade</h3>
+                            <p>Sente a mente acelerada e inquieta, como se não conseguisse parar de pensar.</p>
+                        </div>
+                        <div class="for-you-card">
+                            <h3>Angústia</h3>
+                            <p>Tem uma sensação ruim constante, mesmo quando tudo parece estar sob controle.</p>
+                        </div>
+                        <div class="for-you-card">
+                            <h3>Depressão</h3>
+                            <p>Fica sem energia e sem vontade de levantar da cama, como se nada fizesse diferença.</p>
+                        </div>
+                        <div class="for-you-card">
+                            <h3>Burnout</h3>
+                            <p>Sente que chegou a uma exaustão emocional e física e não tem vontade de ir trabalhar ou fazer coisas simples do dia a dia.</p>
+                        </div>
+                        <div class="for-you-card">
+                            <h3>Desregulação Emocional</h3>
+                            <p>Tem dificuldade em lidar com o que sente, hora tem muita raiva e hora paralisa pelo medo.</p>
+                        </div>
+                        <div class="for-you-card">
+                            <h3>Baixa Autoestima</h3>
+                            <p>Duvida de si mesma(o), tem medo de errar ou de não ser suficiente para os outros.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="for-you-card">
-                    <div class="for-you-icon">☁️</div>
-                    <p>Tem uma sensação ruim constante, mesmo quando tudo parece estar sob controle.</p>
-                </div>
-                <div class="for-you-card">
-                    <div class="for-you-icon">😔</div>
-                    <p>Fica sem energia e sem vontade de levantar da cama, como se nada fizesse diferença.</p>
-                </div>
-                <div class="for-you-card">
-                    <div class="for-you-icon">😰</div>
-                    <p>Sente que chegou a uma exaustão emocional e física e não tem vontade de ir trabalhar ou fazer coisas simples do dia a dia.</p>
-                </div>
-                <div class="for-you-card">
-                    <div class="for-you-icon">🎭</div>
-                    <p>Tem dificuldade em lidar com o que sente, hora tem muita raiva e hora paralisa pelo medo.</p>
-                </div>
-                <div class="for-you-card">
-                    <div class="for-you-icon">💭</div>
-                    <p>Duvida de si mesma(o), com medo de errar ou de não ser suficiente para os outros.</p>
-                </div>
+                <button class="carousel-nav next" onclick="moveCarousel(1)">›</button>
+                <div class="carousel-dots" id="carouselDots"></div>
             </div>
             <div style="text-align: center; margin-top: 2.5rem;">
                 <a href="https://api.whatsapp.com/send?phone=5511966028821&text=Ol%C3%A1!%20Vim%20pelo%20Google,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Obrigado(a)." class="hero-cta">Fale comigo no WhatsApp</a>
@@ -948,8 +1146,78 @@
         <div class="container">
             <h2>O que dizem meus pacientes</h2>
 
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">Esse é o relato de alguém que se sentia perdido! E que agora consegue se identificar como parte de algo! Ela conseguiu resolver um problema do vinha a muito tempo me quebrando pra resolver: "Como posso contribuir socialmente com os talentos que tenho?" e ela resolveu! Sou grato pela oportunidade! Obrigado!</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">A psicóloga Xênia Letícia é uma excelente profissional, muito acolhedora. Meu ajudou com várias questões, orientou e abriu meus olhos para situações que não estavam tão claras, tanto na vida pessoal, quanto na profissional.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">A Xênia é uma profissional incrível. Sempre muito atenta, com abordagem adequada em situações diferentes e faz com que o paciente fique muito a vontade e confortável para expôr seus sentimentos nas sessões. Super indico</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-avatar">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="stars">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <p class="testimonial-text">Tive uma experiência extremamente positiva com a Xênia. Além de psicóloga, ela é uma excelente consultora de carreira, e me auxiliou de forma integral durante uma fase crucial de transição de vida. Sua orientação trouxe uma profunda compreensão e manutenção da minha saúde mental, enquanto me direcionava profissionalmente para este novo momento. Ela fez uma enorme diferença na forma como enxergo e planejo meu futuro, tanto pessoal quanto profissional. Recomendo fortemente seus serviços a todos que buscam um acompanhamento completo e alinhado com seus objetivos e aspirações mais profundas.</p>
+                </div>
+            </div>
+
             <div class="google-link">
-                <a href="https://www.google.com/search?q=X%C3%AAnia+Leticia+M.+Hisamoto+Psic%C3%B3loga+e+Consultora+de+Carreira" target="_blank">⭐ Ver avaliações no Google</a>
+                <a href="https://www.google.com/search?sca_esv=dc9ce39bf885719d&sxsrf=AE3TifMp-e8WUNWFN1VIXzx-zTdGODVZWQ:1761390246892&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1TV3N8dKGQaWKpqNmpqM5LL-wKGP5K839mfAWJfW7Ikviiyc33tmRQl6bcrKTwceoslqXxQAJh81q49HiZTzKHV1fit15ikEMj1t_8khE-63UgvrsBcZPj_W34AQKDkTC2gbKUc7JPNEicx1P4ZFjqoRUmd&q=X%C3%AAnia+Leticia+M.+Hisamoto+Psic%C3%B3loga+Cl%C3%ADnica+e+Organizacional+Reviews&sa=X&ved=2ahUKEwi_h-j_mb-QAxVgL7kGHSNxHD0Q0bkNegQIOxAD&biw=1728&bih=913&dpr=2" target="_blank">⭐ Ver mais avaliações no Google</a>
             </div>
         </div>
     </section>
@@ -1011,6 +1279,86 @@
                 }
             });
         });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const cards = track.querySelectorAll('.for-you-card');
+        const dotsContainer = document.getElementById('carouselDots');
+        let cardsPerView = 1;
+
+        function updateCardsPerView() {
+            if (window.innerWidth >= 1024) {
+                cardsPerView = 3;
+            } else if (window.innerWidth >= 768) {
+                cardsPerView = 2;
+            } else {
+                cardsPerView = 1;
+            }
+        }
+
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            const totalSlides = Math.ceil(cards.length / cardsPerView);
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot';
+                if (i === 0) dot.classList.add('active');
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateCarousel() {
+            const cardWidth = cards[0].offsetWidth;
+            const offset = -currentSlide * cardWidth * cardsPerView;
+            track.style.transform = `translateX(${offset}px)`;
+
+            // Update dots
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function moveCarousel(direction) {
+            const totalSlides = Math.ceil(cards.length / cardsPerView);
+            currentSlide += direction;
+
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Initialize carousel
+        updateCardsPerView();
+        createDots();
+        updateCarousel();
+
+        // Update on resize
+        window.addEventListener('resize', () => {
+            const oldCardsPerView = cardsPerView;
+            updateCardsPerView();
+            if (oldCardsPerView !== cardsPerView) {
+                currentSlide = 0;
+                createDots();
+                updateCarousel();
+            }
+        });
+
+        // Auto-play carousel
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
     </script>
 </body>
 </html>
